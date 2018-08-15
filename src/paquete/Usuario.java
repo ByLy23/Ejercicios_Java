@@ -12,8 +12,10 @@ import java.util.Scanner;
  * @author byron
  */
 public class Usuario {
-    private int user[];
-    private int n=1;
+    private String[] username;
+    private int n=0;
+private int contador=1;
+private String nombre;
 
     public int getN() {
         return n;
@@ -24,13 +26,16 @@ public class Usuario {
     }
     
     public Usuario(){
-     //  user= new int[n];
+       username = new String[5];
         int a;
+        int restador=5;
         do{
         System.out.println("--Usuarios--");
         System.out.println("1.Ingresar usuarios\n2.Mostrar usuarios ascendente\n3.Mostrar usuarios descendente\n4.Menu principal");
         Scanner st= new Scanner(System.in);
         a= st.nextInt();
+            
+           
         switch(a){
             case 1:
                ingresarUsuarios();
@@ -52,21 +57,49 @@ public class Usuario {
       
     }
     public void ingresarUsuarios(){
+       
         do{
-            comprobarUsuario();
-            System.out.println("hola "+ n);
+            System.out.println("Ingrese Nombre #"+ contador+n);
+            Scanner sc= new Scanner(System.in);
+            nombre= sc.next();
+            username[n]= nombre;
+            System.out.println();
+            System.out.println(username[n]+" "+contador);
             n++;
-        }while(n!=6);
+            contador++;
+           /* if (comprobarUsuario(nombre)) {
+            user= new int[n];
+            n++;
+            contador++;
+            }else{
+                System.out.println("error");
+                ingresarUsuarios();
+            }*/
+        }while(n!=5);
           setN(0);
     }
-    public void comprobarUsuario(){
+    public boolean comprobarUsuario(String nombre){
            System.out.println("comprobando");
+          
+           return true;
     }
     public void mostrarAsc(){
-        
+        if(username[n]==null){
+            for (int i = 0; i < 5; i++) {
+                username[i]="Vacio";
+                System.out.println(username[i]);
+            }       
+        }
+        else{
+      for (int i = 0; i < 5; i++) {
+            System.out.println(username[i]);
+            
+        }}
     }
     public void mostrarDesc(){
-        
+        for (int i = 4; i >=0; i--) {
+            System.out.println(username[i]);
+        }
     }
     
 }
