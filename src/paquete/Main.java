@@ -26,7 +26,7 @@ public class Main {
      }
        switch(lector){
            case 1:
-               
+               Usuario user= new Usuario();
                break;
            case 2:
              
