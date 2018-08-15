@@ -81,10 +81,8 @@ private String nombre;
           
     }
     public boolean comprobarUsuario(String nombre){
-           System.out.println("comprobando");
           for (int i = 0; i < 4; i++) {
               if (nombre.equals(username[i])) {
-                  System.out.println("nombre repetido favor de poner otro1");
                return false;   
               }
               else
