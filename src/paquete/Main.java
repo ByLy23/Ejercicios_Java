@@ -17,7 +17,7 @@ public class Main {
        int lector=0;
        do{
        System.out.println("--[IPC1]Tarea3_201700733--");
-       System.out.println("1.Usuarios\n2.Contar digitos repetidos\n3.3 numeros de mayor a menor\n4.SCalcular promedio\n5.Salir");
+       System.out.println("1.Usuarios\n2.Contar digitos repetidos\n3.Numeros de mayor a menor\n4.Calcular promedio\n5.Salir");
      try{
        Scanner sc= new Scanner(System.in);
        lector= sc.nextInt();

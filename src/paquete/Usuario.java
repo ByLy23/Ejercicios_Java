@@ -57,30 +57,39 @@ private String nombre;
       
     }
     public void ingresarUsuarios(){
-       
+       for (int i = 0; i < 4; i++) {
+            username[i]="";
+        }
         do{
-            System.out.println("Ingrese Nombre #"+ contador+n);
+            
+            System.out.println("Ingrese Nombre #"+ contador);
             Scanner sc= new Scanner(System.in);
             nombre= sc.next();
-            username[n]= nombre;
+           if (comprobarUsuario(nombre)) {
+               username[n]= nombre;
             System.out.println();
-            System.out.println(username[n]+" "+contador);
-            n++;
-            contador++;
-           /* if (comprobarUsuario(nombre)) {
-            user= new int[n];
+            System.out.println("Registrado");
             n++;
             contador++;
             }else{
-                System.out.println("error");
-                ingresarUsuarios();
-            }*/
+                System.out.println("Nombre repetido");
+                
+            }
         }while(n!=5);
           setN(0);
+          contador=0;
+          
     }
     public boolean comprobarUsuario(String nombre){
            System.out.println("comprobando");
-          
+          for (int i = 0; i < 4; i++) {
+              if (nombre.equals(username[i])) {
+                  System.out.println("nombre repetido favor de poner otro1");
+               return false;   
+              }
+              else
+                  return true;
+        }
            return true;
     }
     public void mostrarAsc(){
