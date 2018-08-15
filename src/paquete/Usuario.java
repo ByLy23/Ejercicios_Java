@@ -5,6 +5,7 @@
  */
 package paquete;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
@@ -26,16 +27,19 @@ private String nombre;
     }
     
     public Usuario(){
-       username = new String[5];
-        int a;
+       username = new String[5];//se instancia el vector de tamanio 5 que va de 0 a 4
+        int a=0;
         int restador=5;
         do{
         System.out.println("--Usuarios--");
         System.out.println("1.Ingresar usuarios\n2.Mostrar usuarios ascendente\n3.Mostrar usuarios descendente\n4.Menu principal");
+        try{
         Scanner st= new Scanner(System.in);
         a= st.nextInt();
-            
-           
+        }
+        catch(InputMismatchException e){
+            System.out.println("Error, numeros no letras");
+        }
         switch(a){
             case 1:
                ingresarUsuarios();
@@ -57,7 +61,7 @@ private String nombre;
       
     }
     public void ingresarUsuarios(){
-       for (int i = 0; i < 4; i++) {
+       for (int i = 0; i < 4; i++) {//se coloca de 0 a 4 porque es sobre el vector no sobre la cantidad de posiciones
             username[i]="";
         }
         do{
