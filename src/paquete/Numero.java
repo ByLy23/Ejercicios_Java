@@ -67,7 +67,24 @@ public class Numero {
     }
        
     public void numeroBuscar(BigInteger mat){
-        
+        String digito =String.valueOf(mat);
+        int valido=digito.length();
+       char finale;
+        int sumador;
+        char[] resultado= new char[valido];  
+        for (int j = 0; j < valido; j++) {
+            resultado[j]=digito.charAt(j);
+           
+            System.out.println(resultado[j]);
+        }
+          System.out.println("ingrese numero a buscar");
+        Scanner sc= new Scanner(System.in);
+        finale= (char) sc.nextInt();
+         for (int i = 0; i < valido; i++) {
+            if(finale==resultado[i]);
+             System.out.println("hola");
+        }
+       
     }
     public void numDigitos(BigInteger nu){     
         String cantidad= String.valueOf(nu);
