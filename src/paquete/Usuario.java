@@ -61,7 +61,7 @@ private String nombre;
       
     }
     public void ingresarUsuarios(){
-       for (int i = 0; i < 4; i++) {//se coloca de 0 a 4 porque es sobre el vector no sobre la cantidad de posiciones
+       for (int i = 0; i < 4; i++) {//se coloca de 0 a 4 porque es sobre el vector no sobre la cantidad de posiciones lo que hace es borrar lo anterior escrito para poner nombres nuevos
             username[i]="";
         }
         do{

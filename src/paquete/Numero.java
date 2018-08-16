@@ -16,7 +16,11 @@ import java.util.Scanner;
 public class Numero {
     int contador;
     int n;
-    private BigInteger[] numero= new BigInteger[n];
+    private BigInteger numero;
+
+    public void setNumero(BigInteger numeo) {
+        this.numero = numeo;
+    }
     public Numero(){
     do{
         System.out.println("--Contador de digitos--");
@@ -31,13 +35,13 @@ public class Numero {
         switch(contador){
             case 1:
                 
-               ingresaNumero();
+               ingresaNumero(numero);
                 break;
             case 2:
-                numeroBuscar();
+                numeroBuscar(numero);
                 break;
             case 3: 
-                numDigitos();
+                numDigitos(numero);
                 break;
             case 4:
                   Main menu= new Main();
@@ -48,13 +52,25 @@ public class Numero {
         }
         }while(contador!=4);
     }
-    public void ingresaNumero(){
+    public void ingresaNumero(BigInteger nume){
+        
+        System.out.println("Ingrese numero");
+          try{
+        Scanner st= new Scanner(System.in);
+        nume= st.nextBigInteger();
+          }
+        catch(InputMismatchException exception){
+                   System.out.println("error");
+                }
+          setNumero(nume);
+          System.out.println(nume);
+    }
+       
+    public void numeroBuscar(BigInteger mat){
         
     }
-    public void numeroBuscar(){
-        
-    }
-    public void numDigitos(){
-        
+    public void numDigitos(BigInteger nu){     
+        String cantidad= String.valueOf(nu);
+        System.out.println("Contiene "+cantidad.length()+ " Digitos");
     }
 }
