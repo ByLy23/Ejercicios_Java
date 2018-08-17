@@ -63,29 +63,31 @@ public class Numero {
                    System.out.println("error");
                 }
           setNumero(nume);
-          System.out.println(nume);
+          System.out.println("Registrado");
     }
        
     public void numeroBuscar(BigInteger mat){
         String digito =String.valueOf(mat);
         int valido=digito.length();
-       char finale;
-        int sumador;
-        char[] resultado= new char[valido];  
+       int finale;
+        int sumador=0;
+        int[] resultado= new int[valido];  
         for (int j = 0; j < valido; j++) {
-            resultado[j]=digito.charAt(j);
+            resultado[j]=Integer.parseInt(String.valueOf(digito.charAt(j)));//convierte cada digito char en un digito int con un doble casteo
            
-            System.out.println(resultado[j]);
         }
           System.out.println("ingrese numero a buscar");
         Scanner sc= new Scanner(System.in);
-        finale= (char) sc.nextInt();
+        finale= sc.nextInt();
          for (int i = 0; i < valido; i++) {
-            if(finale==resultado[i]);
-             System.out.println("hola");
+            if(resultado[i]!=finale){}
+             else
+             sumador++;
         }
+         System.out.println("El numero "+numero+" Contiene "+sumador+" Digito(s) con el numero "+finale );
        
     }
+    
     public void numDigitos(BigInteger nu){     
         String cantidad= String.valueOf(nu);
         System.out.println("Contiene "+cantidad.length()+ " Digitos");
