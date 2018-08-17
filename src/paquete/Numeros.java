@@ -13,7 +13,7 @@ import java.util.Scanner;
  *
  * @author byron
  */
-public class Numero {
+public class Numeros {
     int contador;
     int n;
     private BigInteger numero;
@@ -21,7 +21,7 @@ public class Numero {
     public void setNumero(BigInteger numeo) {
         this.numero = numeo;
     }
-    public Numero(){
+    public Numeros(){
     do{
         System.out.println("--Contador de digitos--");
         System.out.println("1.Ingresar numero\n2.Ingresar numero a buscar\n3.Mostrar numero de digitos\n4.Menu principal");

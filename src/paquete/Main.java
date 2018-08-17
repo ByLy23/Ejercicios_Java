@@ -29,7 +29,7 @@ public class Main {
                Usuario user= new Usuario();
                break;
            case 2:
-             Numero num= new Numero();
+             Numeros num= new Numeros();
                break;
                case 3:  
                   
