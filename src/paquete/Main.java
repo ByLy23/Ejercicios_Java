@@ -35,7 +35,7 @@ public class Main {
                   Orden or= new Orden();
                break;
            case 4:
-           
+           Promedio prom= new Promedio();
                break;
                case 5:
                    System.out.println("gracias por visitarnos espero vuelvas pronto :v");
