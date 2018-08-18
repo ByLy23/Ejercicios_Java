@@ -32,7 +32,7 @@ public class Main {
              Numeros num= new Numeros();
                break;
                case 3:  
-                  
+                  Orden or= new Orden();
                break;
            case 4:
            
